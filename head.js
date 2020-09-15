@@ -8,7 +8,7 @@ const assertEqual = function(actual, expected) {
 
 const head = function(inputArray) {
   return inputArray[0];
-}
+};
 
 assertEqual(head([1,2,3]),1);
 assertEqual(head(["a","b","c"]),"a");
