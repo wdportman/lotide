@@ -16,13 +16,13 @@ const eqArrays = function(array1, array2) {
   return output;
 };
 
-const assertArraysEqual = function (array1, array2) {
+const assertArraysEqual = function(array1, array2) {
   if (eqArrays(array1, array2) === true) {
     console.log("✅ Yep, the two arrays are equal.");
   } else {
     console.log("🚫 No, the two arrays are not equal.");
   }
-}
+};
 
 //Test cases:
 assertArraysEqual([2, 2], [2, 2]);
