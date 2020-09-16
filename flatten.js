@@ -40,8 +40,8 @@ const assertArraysEqual = function(array1, array2) {
 
 //Test cases
 
-assertArraysEqual((flatten([2,[3,4],5,[6]])),[2,3,4,5,6])
-assertArraysEqual((flatten([2,3,4,5,6])),[2,3,4,5,6])
-assertArraysEqual((flatten([])),[])
-assertArraysEqual((flatten([1])),[1])
-assertArraysEqual((flatten([1,"1",[1,1]])),[1,"1",1,1])
+assertArraysEqual((flatten([2,[3,4],5,[6]])),[2,3,4,5,6]);
+assertArraysEqual((flatten([2,3,4,5,6])),[2,3,4,5,6]);
+assertArraysEqual((flatten([])),[]);
+assertArraysEqual((flatten([1])),[1]);
+assertArraysEqual((flatten([1,"1",[1,1]])),[1,"1",1,1]);

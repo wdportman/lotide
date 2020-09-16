@@ -28,7 +28,7 @@ const letterPositions = function(input) {
   let output = {};
   input = input.toLowerCase();
   let lettersArray = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'];
-  for (let i=0; i < input.length; i++) {
+  for (let i = 0; i < input.length; i++) {
     if (lettersArray.includes(input[i])) {
       if (output[input[i]]) {
         output[input[i]].push(i);
@@ -43,4 +43,4 @@ const letterPositions = function(input) {
 assertArraysEqual(letterPositions("hello")["h"],[0]);
 assertArraysEqual(letterPositions("hello")["e"],[1]);
 assertArraysEqual(letterPositions("hello")["l"],[2,3]);
-assertArraysEqual(letterPositions("hello")["o"],[4])
+assertArraysEqual(letterPositions("hello")["o"],[4]);
