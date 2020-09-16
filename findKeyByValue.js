@@ -6,10 +6,16 @@ const assertEqual = function(actual, expected) {
   }
 };
 
-const findKeyByValue = function(input) {
-  let output = "";
+const findKeyByValue = function(inputObject,inputValue) {
+  let output = undefined;
+  let keys = Object.keys(inputObject);
+  for (key of keys) {
+    if (inputObject[key] === inputValue) {
+      output = key;
+    }
+  }
   return output;
-}
+};
 
 const bestTVShowsByGenre = { 
   sci_fi: "The Expanse",
