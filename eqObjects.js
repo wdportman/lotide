@@ -24,27 +24,24 @@ const eqArrays = function(array1, array2) {
   return output;
 };
 
-const eqObjects = function(obj1, obj2) {
-  let output = "";
+const eqObjects = function (obj1, obj2) {
   if (Object.keys(obj1).length !== Object.keys(obj2).length) {
-    output = false;
+    return false;
   } else {
     let keys = Object.keys(obj1);
     for (let key of keys) {
       if (Array.isArray(obj1[key])) {
         if (!eqArrays(obj1[key], obj2[key])) {
-          output = false;
-        } else {
-          output = true;
+          return false;
         }
-      } else if (obj1[key] !== obj2[key]) {
-        output = false;
-      } else {
-        output = true;
+      } else if (!Array.isArray(obj1[key])) {
+        if (obj1[key] !== obj2[key]) {
+          return false;
+        }
       }
     }
   }
-  return output;
+  return true;
 };
 
 //Objects w/ only primitive data -- test cases:
@@ -64,5 +61,20 @@ const obj6 = {a: [1,2,3], b: [2]};
 
 assertEqual(eqObjects(obj4,obj5), true);
 assertEqual(eqObjects(obj5,obj6), false);
+
+
+const obja = {
+  a: "hi",
+  b: 1,
+  c: [false, true]
+}
+
+const objb = {
+  a: "hi",
+  b: 1,
+  c: [false, true]
+}
+
+assertEqual(eqObjects(obja,objb), true);
 
 //Note: We are not testing whether objects containing objects (other than arrays) are equal for now.
