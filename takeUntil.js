@@ -4,11 +4,12 @@ const takeUntil = function(inputArray, callback) {
   for (let i = 0; i < inputArray.length; i++) {
     if (!callback(inputArray[i])) {
       output.push(inputArray[i]);
+    } else {
+      return output;
     }
-    else return output;
   }
   return output;
-}
+};
 
 //eqArrays:
 const eqArrays = function(array1, array2) {
@@ -45,6 +46,6 @@ assertArraysEqual(takeUntil([1, 2, 5, 7, 2, -1, 2, 4, 5], x => x < 0), [ 1, 2, 5
 
 assertArraysEqual(takeUntil(["I've", "been", "to", "Hollywood", ",", "I've", "been", "to", "Redwood"], x => x === ','), [ 'I\'ve', 'been', 'to', 'Hollywood' ]);
 
-assertArraysEqual(takeUntil([1,2,3,4,5],x => x >3),[1,2,3]);
+assertArraysEqual(takeUntil([1,2,3,4,5],x => x > 3),[1,2,3]);
 
 assertArraysEqual(takeUntil(["a","ab","abc"],x => x.length >= 2),["a"]);
