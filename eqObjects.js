@@ -24,7 +24,7 @@ const eqArrays = function(array1, array2) {
   return output;
 };
 
-const eqObjects = function (obj1, obj2) {
+const eqObjects = function(obj1, obj2) {
   if (Object.keys(obj1).length !== Object.keys(obj2).length) {
     return false;
   } else {
@@ -67,13 +67,13 @@ const obja = {
   a: "hi",
   b: 1,
   c: [false, true]
-}
+};
 
 const objb = {
   a: "hi",
   b: 1,
   c: [false, true]
-}
+};
 
 assertEqual(eqObjects(obja,objb), true);
 

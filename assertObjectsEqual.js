@@ -16,7 +16,7 @@ const eqArrays = function(array1, array2) {
   return output;
 };
 
-const eqObjects = function (obj1, obj2) {
+const eqObjects = function(obj1, obj2) {
   if (Object.keys(obj1).length !== Object.keys(obj2).length) {
     return false;
   } else {
@@ -52,14 +52,14 @@ const obja = {
   b: [1,2],
   d: "e",
   c: [false, true]
-}
+};
 
 const objb = {
   c: [false, true],
   a: "hi",
   b: [1,2],
   d: "e"
-}
+};
 
-assertObjectsEqual(obja,objb)
+assertObjectsEqual(obja,objb);
 // console.log(`Example label: ${inspect(obj1)}`);
