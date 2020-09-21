@@ -27,3 +27,5 @@ let result2 = countLetters("Will");
 
 assertEqual(result1["l"],1);
 assertEqual(result2["l"],2);
+
+module.exports = countLetters;

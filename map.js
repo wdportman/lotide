@@ -43,3 +43,5 @@ assertArraysEqual(map(letterArray, letterArray => letterArray[0]), ["a", "d", "g
 assertArraysEqual(map(["abc", "def", "ghi"], array1 => array1[0]), ["a", "d", "g"]);
 assertArraysEqual(map([1, 2, 3], x => x * 2), [2, 4, 6]);
 assertArraysEqual(map([1, 2, 3], item => item + 2), [3, 4, 5]);
+
+module.exports = map;

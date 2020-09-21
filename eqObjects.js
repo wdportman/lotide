@@ -114,3 +114,5 @@ assertEqual(eqObjects(objWObj1,objWObj2), true);
 assertEqual(eqObjects(objWObj1,objWObj3), false);
 
 //Note: We are not testing whether objects containing objects (other than arrays) are equal for now.
+
+module.exports = eqObjects;

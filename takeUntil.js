@@ -49,3 +49,5 @@ assertArraysEqual(takeUntil(["I've", "been", "to", "Hollywood", ",", "I've", "be
 assertArraysEqual(takeUntil([1,2,3,4,5],x => x > 3),[1,2,3]);
 
 assertArraysEqual(takeUntil(["a","ab","abc"],x => x.length >= 2),["a"]);
+
+module.exports = takeUntil;

@@ -63,3 +63,5 @@ const objb = {
 
 assertObjectsEqual(obja,objb);
 // console.log(`Example label: ${inspect(obj1)}`);
+
+module.exports = assertObjectsEqual;
