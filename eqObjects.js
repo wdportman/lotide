@@ -31,10 +31,14 @@ const eqObjects = function(obj1, obj2) {
     let keys = Object.keys(obj1);
     for (let key of keys) {
       if (Array.isArray(obj1[key])) {
-        if (!eqArrays(obj1[key], obj2[key])) {
+        if (!eqArrays(obj1[key],obj2[key])) {
           return false;
         }
-      } else if (!Array.isArray(obj1[key])) {
+      } else if (typeof obj1[key] === "object") {
+        if (!eqObjects(obj1[key],obj2[key])) {
+          return false;
+        }
+      } else {
         if (obj1[key] !== obj2[key]) {
           return false;
         }
@@ -76,5 +80,37 @@ const objb = {
 };
 
 assertEqual(eqObjects(obja,objb), true);
+
+const objWObj1 = {
+  a: 1,
+  b: {
+    a: 1,
+    b: "two",
+    c: {a: 2, b: 1, c: {a: 1}}
+  }
+};
+
+const objWObj2 = {
+  a: 1,
+  b: {
+    a: 1,
+    b: "two",
+    c: {a: 2, b: 1, c: {a: 1}}
+  }
+};
+
+const objWObj3 = {
+  a: 1,
+  b: {
+    a: 1,
+    b: "two",
+    c: "hello"
+  }
+};
+
+eqObjects(objWObj1,objWObj2);
+
+assertEqual(eqObjects(objWObj1,objWObj2), true);
+assertEqual(eqObjects(objWObj1,objWObj3), false);
 
 //Note: We are not testing whether objects containing objects (other than arrays) are equal for now.
