@@ -1,7 +1,7 @@
 {
-  "name": "lotide",
+  "name": "@wdportman/lotide",
   "version": "1.0.0",
-  "description": "Lotide project",
+  "description": "Lotide project: A mini clone of the [Lodash](https://lodash.com) library. Created for learning purposes.",
   "main": "assertArraysEqual.js",
   "directories": {
     "test": "test"
@@ -13,7 +13,7 @@
     "type": "git",
     "url": "git+https://github.com/wdportman/lotide.git"
   },
-  "author": "Will Portman",
+  "author": "Will Portman @wdportman",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/wdportman/lotide/issues"
